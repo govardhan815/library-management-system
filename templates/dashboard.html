@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 40px;
+  }
+
+  .dashboard-card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid #fff2;
+  }
+
+  .dashboard-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .dashboard-card a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .dashboard-card a:hover {
+    color: #ffc107;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  }
+</style>
+
+<h1 class="text-light text-center mt-4">Welcome to the Library Management System</h1>
+
+<div class="dashboard-container">
+  <div class="dashboard-card"><a href="/add_book">➕ Add Book</a></div>
+  <div class="dashboard-card"><a href="/manage_books">📚 Manage Books</a></div>
+  <div class="dashboard-card"><a href="/add_member">👤 Add Member</a></div>
+  <div class="dashboard-card"><a href="/issue_book">📤 Issue Book</a></div>
+  <div class="dashboard-card"><a href="/return_book">📥 Return Book</a></div>
+  <div class="dashboard-card"><a href="/reports">📊 Reports</a></div>
+  <div class="dashboard-card"><a href="/request_book">📨 Request Book</a></div>
+  <div class="dashboard-card"><a href="/view_requests">📬 View Requests</a></div>
+</div>
+
+
+{% endblock %}

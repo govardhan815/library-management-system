@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-light">Add Member</h2>
+<form method="POST" class="text-light">
+    <div class="mb-3">
+        <input type="text" name="name" placeholder="Member Name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <input type="email" name="email" placeholder="Email" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Member</button>
+</form>
+{% endblock %}

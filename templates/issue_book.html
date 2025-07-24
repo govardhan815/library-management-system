@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-light">Issue Book</h2>
+<form method="POST" class="text-light">
+    <div class="mb-3">
+        <label>Book</label>
+        <select name="book_id" class="form-control">
+            {% for b in books %}
+            <option value="{{ b[0] }}">{{ b[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label>Member</label>
+        <select name="member_id" class="form-control">
+            {% for m in members %}
+            <option value="{{ m[0] }}">{{ m[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success">Issue</button>
+</form>
+{% endblock %}

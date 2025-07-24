@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .centered-message {
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        flex-direction: column;
+    }
+
+    .centered-message h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 5px black;
+    }
+</style>
+
+<div class="centered-message">
+    <h1>Welcome to the Library Management System</h1>
+    <a class="btn btn-primary mt-4" href="/login">Login</a>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-light">Add Book</h2>
+<form method="POST" class="text-light">
+    <div class="mb-3">
+        <input type="text" name="title" placeholder="Title" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <input type="text" name="author" placeholder="Author" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <input type="text" name="category" placeholder="Category" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Book</button>
+</form>
+{% endblock %}
